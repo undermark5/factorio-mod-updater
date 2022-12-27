@@ -48,6 +48,8 @@ def _version_match(installed: str, mod: str):
     version_regex = re.compile("(?P<major>\\d+)\\.(?P<minor>\\d+)(?:.(?P<sub>\\d+))?")
     mod_groups = version_regex.search(mod).groupdict()
     installed_groups = version_regex.search(installed).groupdict()
+    print(mod_groups)
+    print(installed_groups)
     """Checks if factorio versions are compatible."""
     if installed.startswith("1.") and mod.startswith("0.18"):
         return True
