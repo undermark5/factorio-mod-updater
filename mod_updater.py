@@ -296,6 +296,7 @@ class ModUpdater:
             data["missing_deps"] = []
             data["dependencies"] = {}
             dependencies = data["latest"]["info_json"]["dependencies"]
+            print(dependencies)
             # Preparation for future explicit version matching
             dep_pattern = re.compile(r"^([\w -]+) ([<=>][=])? (\d+[.]\d+[.]\d+)$")
             for dep_entry in dependencies:
