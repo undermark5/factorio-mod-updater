@@ -265,6 +265,7 @@ class ModUpdater:
             for rel in data["metadata"]["releases"]:
                 rel_ver = rel["info_json"]["factorio_version"]
                 if _version_match(installed=self.fact_version["release"], mod=rel_ver):
+                    print("adding version")
                     matching_releases.append(rel)
 
             if len(matching_releases) > 0:
