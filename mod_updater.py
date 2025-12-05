@@ -300,8 +300,8 @@ class ModUpdater:
             dependencies = data["latest"]["info_json"]["dependencies"]
             # Preparation for future explicit version matching
             dep_pattern = re.compile(
-                r"^(?:~ )?(?P<name>[\w -]+)(?: (?P<arg>(?:[<>]=?)|=) \
-                        (?P<ver>\d+[.]\d+[.]\d+))?$"
+                r"^(?:~ )?(?P<name>[\w -]+)"
+                r"(?: (?P<arg>(?:[<>]=?)|=) (?P<ver>\d+[.]\d+[.]\d+))?$"
             )
             for dep_entry in dependencies:
                 match = dep_pattern.fullmatch(dep_entry)
